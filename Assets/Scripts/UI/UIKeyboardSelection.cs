@@ -27,5 +27,9 @@ public class UIKeyboardSelection : MonoBehaviour
             if (active >= buttons.Count) active = 0;
             EventSystem.current.SetSelectedGameObject(buttons[active]);
         }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UIMainMenuManager.Instance.ToggleSettings(false);
+        }
     }
 }
